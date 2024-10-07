@@ -64,3 +64,45 @@ impl Bool {
 }
 
 impl FLSMsg for Bool {}
+
+#[derive(Serialize, Deserialize, Clone)]
+pub struct Float32MultiArray
+{
+    pub data : Vec<Float32>
+}
+impl Float32MultiArray {
+    pub fn new()->Float32MultiArray
+    {
+        Float32MultiArray { data: Vec::new() }
+    }
+}
+
+impl FLSMsg for Float32MultiArray {}
+
+#[derive(Serialize, Deserialize, Clone)]
+pub struct Int32MultiArray
+{
+    pub data : Vec<Int32>
+}
+impl Int32MultiArray {
+    pub fn new()->Int32MultiArray
+    {
+        Int32MultiArray { data: Vec::new() }
+    }
+}
+
+impl FLSMsg for Int32MultiArray {}
+
+#[derive(Serialize, Deserialize, Clone)]
+pub struct StringMsg
+{
+    pub data : String
+}
+impl StringMsg {
+    pub fn new()->StringMsg
+    {
+        StringMsg { data: String::new() }
+    }
+}
+
+impl FLSMsg for StringMsg {}
